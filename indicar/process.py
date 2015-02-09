@@ -132,7 +132,7 @@ class Process(object):
     def extract(self, src, dst):
         '''Extract the Landsat 8 file.'''
         print("Extracting %s - It might take some time" % self.image)
-        call(['tar', '-xzf', src, '-C', dst])
+        call(['tar', '-jxzf', src, '-C', dst])
 
     def make_rgb(self):
         '''Make a RGB Image using the bands 4, 5 and 6.'''
